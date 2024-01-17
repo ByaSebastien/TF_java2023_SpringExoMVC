@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>JustTask! - details</title>
+</head>
+<body th:object="${task}">
+
+  <h1>Details for task (id: <span th:text="*{id}">1</span>)</h1>
+
+  <div>
+    <dl>
+      <dt>id:</dt>
+      <dd th:text="*{id}"></dd>
+
+      <dt>title:</dt>
+      <dd th:text="*{title}"></dd>
+
+      <dt>description:</dt>
+      <dd th:text="*{description}"></dd>
+
+      <dt>urgency:</dt>
+      <dd th:text="*{urgency}"></dd>
+    </dl>
+  </div>
+  <a th:href="@{/index}">Home</a>
+  <a th:href="@{/task}">Back to list</a>
+</body>
+</html>

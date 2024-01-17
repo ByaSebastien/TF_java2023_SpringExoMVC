@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>JustTask! - home</title>
+</head>
+<body>
+  <h1>Bienvenu sur JustTask!</h1>
+  <h2>Nous somme les <span th:text="${#temporals.format(date, 'dd/MM/yyyy')}"></span></h2>
+  <a th:href="@{/task}">List</a>
+</body>
+</html>
