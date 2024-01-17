@@ -2,10 +2,12 @@ package be.tftic.java.exo.mvc.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Getter @Setter
+@NoArgsConstructor
 public class Task {
 
     @Id
@@ -21,4 +23,10 @@ public class Task {
 
     @Column(name = "task_urgency", nullable = false)
     private Urgency urgency;
+
+    public Task(String title, String description, Urgency urgency) {
+        this.title = title;
+        this.description = description;
+        this.urgency = urgency;
+    }
 }
